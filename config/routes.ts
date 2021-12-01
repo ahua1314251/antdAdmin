@@ -1,4 +1,4 @@
-﻿export default [
+export default [
   {
     path: '/user',
     layout: false,
@@ -36,6 +36,23 @@
         name: 'sub-page',
         icon: 'smile',
         component: './Welcome',
+      },
+      {
+        component: './404',
+      },
+    ],
+  },
+  {
+    path: '/database',
+    name: 'database',
+    icon: 'crown',
+    access: 'canAdmin',
+    routes: [
+      {
+        name: '数据库表',
+        icon: 'smile',
+        path: '/database/dataconsole',
+        component: './database/DataConsole',
       },
       {
         component: './404',
